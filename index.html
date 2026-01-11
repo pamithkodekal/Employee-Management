@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Time & Pay Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="Layout">
+            <h1>Employee Time & Pay Dashboard</h1>
+        </div>
+    </header>
+    <main>
+         <div class="form">
+            <div class="row">
+                <label>Employee Name:</label>
+                <input id="Empname" type="text" placeholder="Enter Employee Name">
+            </div>
+            <div class="row">
+                <label>Employee ID:</label>
+                <input type="text" class="EmpID" placeholder="Enter Employee ID">
+            </div>
+            <div class="row">
+                <label>Employee Date:</label>
+                <input type="date" class="Date">
+            </div>
+            <div class="row">
+                <label>Check-in Time:</label>
+                <input type="time" class="Checkin">
+            </div>
+            <div class="row">
+                <label>Check-out Time:</label>
+                <input type="time" class="Checkout">
+            </div>
+
+            <button onclick="Submit()">Submit</button>
+            <button onclick="calculateSalary()">Calculate Salary</button>
+
+            <div id="Salary"></div>
+        </div>
+
+
+    </main>
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
