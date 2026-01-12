@@ -4,50 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Time & Pay Dashboard</title>
+    <title>Employee Attendance & Payroll</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <div class="Layout">
-            <h1>Employee Time & Pay Dashboard</h1>
-        </div>
+
+    <header class="header">
+        <h1>Employee Attendance & Payroll System</h1>
     </header>
-    <main>
-         <div class="form">
-            <div class="row">
-                <label>Employee Name:</label>
-                <input id="Empname" type="text" placeholder="Enter Employee Name">
+
+    <main class="container">
+
+        <!-- Attendance Card -->
+        <section class="card">
+            <h2>Attendance Entry</h2>
+
+            <div class="field">
+                <label>Employee Name</label>
+                <input id="Empname" type="text" placeholder="Enter employee name">
             </div>
-            <div class="row">
-                <label>Employee ID:</label>
-                <input type="text" class="EmpID" placeholder="Enter Employee ID">
+
+            <div class="field">
+                <label>Employee ID</label>
+                <input type="text" class="EmpID" placeholder="EMP001">
             </div>
-            <div class="row">
-                <label>Employee Date:</label>
+
+            <div class="field">
+                <label>Date</label>
                 <input type="date" class="Date">
             </div>
-            <div class="row">
-                <label>Check-in Time:</label>
+
+            <div class="field">
+                <label>Check In</label>
                 <input type="time" class="Checkin">
             </div>
-            <div class="row">
-                <label>Check-out Time:</label>
+
+            <div class="field">
+                <label>Check Out</label>
                 <input type="time" class="Checkout">
             </div>
 
-            <button onclick="Submit()">Submit</button>
-            <button onclick="calculateSalary()">Calculate Salary</button>
+            <div class="buttons">
+                <button class="btn primary" onclick="checkIn()">Check In</button>
+                <button class="btn success" onclick="checkOutAndCalculate()">Check Out</button>
+                <button class="btn neutral" onclick="showSalary()">Show Salary</button>
+            </div>
+        </section>
 
-            <div id="Salary"></div>
-        </div>
+        <!-- Salary Card -->
+        <section class="card salary-card">
+            <h2>Salary Summary</h2>
+            <div id="Salary" class="salary-box">
+                No data available
+            </div>
+        </section>
+         
+        <section id="drop">
+            <h4>Progress Over Duration</h4>
+        <select id="periodType" onchange="showGroupedHours()">
+            <option value="week">Week</option>
+            <option value="month">Month</option>
+            <option value="year">Year</option>
+        </select>
+        </section>
+
+        <div id="groupedHours"></div>
 
 
     </main>
-    <script src="main.js"></script>
 
-
+    <script src="js/data.js"></script>
+    <script src="js/attendance.js"></script>
+    <script src="js/salary.js"></script>
+    <script src="js/ui.js"></script>
+     <script src="js/graph.js"></script>
 </body>
 
 </html>

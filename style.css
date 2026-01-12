@@ -1,125 +1,204 @@
-/* ===== Global Body ===== */
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(120deg, #f5f0e6, #d9cbb0); /* soft browns */
-    min-height: 100vh;
+
+* {
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 60px 20px; /* add more top padding so header & form don't overlap */
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    transition: all 0.3s ease;
 }
 
-/* ===== Header ===== */
-header h1 {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 2rem;
+body {
+    background: #f3f4f6; /* Light gray background */
+    color: #111827;
+    line-height: 1.6;
+}
+
+
+.header {
+    background: linear-gradient(90deg, #2563eb, #4f46e5);
+    color: #ffffff;
+    padding: 20px 15px;
     text-align: center;
-    color: #8b5e3c; /* deep brown */
-    margin-bottom: 50px; /* space between header & form */
-    text-shadow: 2px 2px 8px rgba(139,94,60,0.4);
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
 }
 
-/* ===== Form Container ===== */
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(255, 245, 230, 0.85); /* light brown glass effect */
-    backdrop-filter: blur(12px);
-    padding: 30px 25px;
-    border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    width: 400px;
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 0 15px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.form:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.10);
 }
 
-/* ===== Form Rows ===== */
-.row {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 18px;
-}
-
-/* ===== Labels ===== */
-label {
-    text-align: right;
+.card h2 {
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    color: #111827;
     font-weight: 600;
-    color: #5c3a21; /* darker brown */
 }
 
-/* ===== Inputs ===== */
-input {
+
+.field {
+    margin-bottom: 12px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.field input {
     width: 100%;
     padding: 10px 12px;
-    border-radius: 12px;
-    border: 2px solid #c7a17a; /* medium brown */
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 0.9rem;
     outline: none;
-    font-size: 0.95rem;
-    transition: border 0.3s, box-shadow 0.3s;
+    background: #f9fafb;
 }
 
-input:focus {
-    border-color: #8b5e3c; /* deep brown on focus */
-    box-shadow: 0 0 8px rgba(139,94,60,0.3);
+.field input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 2px rgba(79,70,229,0.2);
 }
 
-/* ===== Buttons ===== */
-button {
-    margin-top: 12px;
-    width: 140px;
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn {
+    flex: 1;
     padding: 10px 0;
     border: none;
-    border-radius: 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
     font-weight: 600;
-    color: #fff;
     cursor: pointer;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
     transition: all 0.3s ease;
 }
 
-button:nth-child(1) {
-    background: linear-gradient(135deg, #c7a17a, #d9b382); /* brown gradient */
-    color: #fff;
-    margin-right: 12px;
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.10);
 }
 
-button:nth-child(1):hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(199,161,122,0.4);
-}
-
-button:nth-child(2) {
-    background: linear-gradient(135deg, #a67c52, #b8926f); /* darker brown gradient */
+.primary {
+    background: linear-gradient(90deg, #2563eb, #4f46e5);
     color: #fff;
 }
 
-button:nth-child(2):hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(166,124,82,0.4);
+.success {
+    background: linear-gradient(90deg, #16a34a, #22c55e);
+    color: #fff;
 }
 
-/* ===== Salary Result ===== */
-#Salary {
-    margin-top: 20px;
-    font-weight: 600;
-    font-size: 1.05rem;
+.neutral {
+    background: linear-gradient(90deg, #6b7280, #9ca3af);
+    color: #fff;
+}
+
+
+.salary-box {
+    background: #f9fafb;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: #111827;
+    line-height: 1.5;
+    min-height: 120px;
+    border: 1px solid #e5e7eb;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+
+#drop {
+    margin-top: 10px;
+    padding: 10px 0;
+}
+
+#drop h4 {
+    margin-bottom: 6px;
+    font-size: 1rem;
+    color: #374151;
+}
+
+#periodType {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    font-size: 0.9rem;
+}
+
+
+#groupedHours table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+#groupedHours th, #groupedHours td {
+    padding: 10px 8px;
     text-align: center;
-    padding: 10px 15px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #f5f0e6, #d9cbb0); /* soft brown gradient */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
-    color: #5c3a21; /* darker brown */
-    transition: all 0.3s ease;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.88rem;
 }
 
-#Salary:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+#groupedHours th {
+    background: #4f46e5;
+    color: #fff;
+    font-weight: 600;
+}
+
+#groupedHours tr:hover td {
+    background: #f3f4f6;
+}
+/* Export Button */
+.btn.export {
+    background: linear-gradient(90deg, #f59e0b, #d97706); /* Amber gradient */
+    color: #fff;
+}
+
+.btn.export:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
 }

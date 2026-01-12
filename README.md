@@ -1,66 +1,107 @@
-# Employee Attendance & Salary Tracker
+Employee Attendance & Payroll System
 
-**Project Status:** 🚧 Under Progress  
+Project Status: 🚀 Active Development
 
----
+Overview
 
-## Overview
+This is a web-based Employee Management System designed to:
 
-This is a **web-based Employee Management System** designed to:
+Record employee name, ID, date, check-in, and check-out times.
 
-- Record employee **name, ID, date, check-in and check-out times**.
-- Calculate **total hours worked**.
-- Compute **salary** based on hours worked and day of the week.
-- Display employee **salary and hours dynamically** on the webpage.
+Calculate total hours worked.
 
-The interface is designed with a **modern anime-inspired style** featuring soft pastel/brown gradients, rounded buttons, and hover effects.
+Compute daily salary based on hours worked and day of the week.
 
----
+Apply bonus logic:
 
-## Features (Planned)
+Work more than 24 days → +1000
 
-- ✅ Input employee details: Name, ID, Date, Check-in/Check-out.
-- ✅ Calculate worked hours and salary dynamically.
-- ✅ Bonus for working on Sundays.
-- 🔄 Save multiple employees’ records (to be implemented).
-- 📊 Dashboard view for all employee salary and hours (future update).
-- 💾 Export to CSV or PDF (future update).
+Full month → +2000
 
----
+Display employee salary and hours dynamically.
 
-## Tech Stack
+View grouped hours and salary by week, month, or year.
 
-- **HTML** - Structure
-- **CSS** - Styling with modern anime-inspired design
-- **JavaScript** - Logic for time calculation and salary
+Export employee data to Excel/CSV format for reporting.
 
----
+The interface is modern and professional, with compact cards, subtle shadows, gradient headers, and a responsive layout.
 
-## How to Use (Current Version)
+Features
+✅ Core Features
 
-1. Open the `index.html` file in a browser.
-2. Enter the **employee details**.
-3. Click **Submit** to register the employee data.
-4. Click **Calculate Salary** to view hours worked and total salary directly on the page.
+Input employee details: Name, ID, Date, Check-in, Check-out.
 
----
+Automatic calculation of worked hours.
 
-## Status
+Daily salary computation with weekday and Sunday bonuses.
 
-Currently, the project is **under development**.  
-Future updates will include:
+Monthly salary calculation with bonus logic.
 
-- Multi-employee support
-- Exporting data
-- Persistent storage
-- Enhanced UI interactions and animations
+Display today’s work hours and total monthly salary.
 
----
+Grouped hours: view total hours and salary by week, month, or year.
 
-## Author
+Export data to Excel for reporting purposes.
 
-Created by: **[Your Name]**  
-Project Type: Web-based Employee Management Tool  
+🔮 Planned Features
 
----
+Multi-employee dashboard with filters and search.
 
+Export summarized payroll reports.
+
+Advanced UI analytics with charts and graphs.
+
+Integration with a backend database for persistent storage.
+
+Tech Stack
+
+HTML – Structure
+
+CSS – Modern and responsive styling
+
+JavaScript – Logic for attendance, salary, and Excel export
+
+How to Use (Current Version)
+
+Open the index.html file in a browser.
+
+Enter employee details and click Check In.
+
+At the end of the workday, click Check Out to log hours and calculate daily salary.
+
+Click Show Salary to view today’s hours and monthly salary.
+
+Select Week/Month/Year from the dropdown to view grouped hours and salary.
+
+Click Export Data to download all employee records as an Excel/CSV file.
+
+Folder Structure
+project-root/
+│
+├─ index.html          # Main HTML page
+├─ style.css           # Stylesheet
+├─ js/
+│   ├─ data.js         # Local storage and employee data
+│   ├─ attendance.js   # Check-in/check-out logic
+│   ├─ salary.js       # Salary calculation logic
+│   ├─ ui.js           # UI helper functions
+│   └─ graph.js        # Grouped hours functions
+└─ README.md
+
+Screenshot (Optional)
+
+
+Modern interface with attendance cards, salary summary, grouped hours table, and export button.
+
+Notes
+
+Data is currently stored in localStorage, so it persists only in the browser.
+
+Future updates will include backend integration, multi-employee management, and analytics dashboard.
+
+Author
+
+Pamith Kodekal
+Web Developer & Project Creator
+
+Project Type: Web-based Employee Attendance & Payroll System
